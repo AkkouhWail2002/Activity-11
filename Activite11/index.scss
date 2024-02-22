@@ -1,0 +1,155 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.landing_page{
+    width: 100%;
+    height: 100vh;
+    background-image: url("Photo/pexels-johannes-plenio-1642770.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .side-bar{
+        width: 100%;
+        height: 12%;
+        padding: {
+            left: 8%;
+            right: 8%;
+        }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            text-transform: uppercase;
+            font-size: 40px;
+            color: #fff;
+            width: auto;
+        }
+        .links{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            ul{
+                width: 70%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                li{
+                    a{
+                        font-size: 17.5px;
+                        text-transform: capitalize;
+                        color: #ffffffa7;
+                        transition-duration: 0.5s;
+                        &.Active{
+                            color: #2060ad;
+                            font-weight: bold;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            color: #2060ad;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            img{
+                width: 30%;
+                visibility: hidden;
+            }
+        }
+    }
+    #menu{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        transform: translateX(-100%);
+        transition-duration: 1s;
+
+        ul{
+            width: 100%;
+            height: 100%;
+            background-color: #79d5f740;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10%;
+            li{
+                a{
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    color: #ffffffa7;
+                    transition-duration: 0.5s;
+                    letter-spacing: 0.1em;
+                    &.Active{
+                        color: #2060ad;
+                        font-weight: bold;
+                    }
+                }
+                &:hover{
+                    a{
+                        color: #2060ad;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        img{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            right: 5%;
+            top: 5%;
+            border-radius: 10px;
+            cursor: pointer;
+            opacity: 0.75;
+        }
+    }
+    @media (max-width:992px) {
+        .side-bar{
+            h1{
+                font-size: 30px;
+            }
+            .links{
+                flex-direction: row;
+                ul{
+                    visibility: hidden;
+                }
+                img{
+                    visibility: visible;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    @media (max-width:767px) {
+        .side-bar{
+            h1{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
